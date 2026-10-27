@@ -136,7 +136,19 @@ footer .wrap{display:flex;align-items:center;gap:18px}
 .hero{padding-top:64px}
 section{padding:56px 0}
 }
-@media(max-width:560px){.grid{grid-template-columns:1fr}.gal{grid-template-columns:1fr;grid-template-rows:auto}.t1{grid-column:auto}.t{height:200px}}
+@media(max-width:560px){
+.grid{grid-template-columns:1fr;gap:12px}
+.card{flex-direction:row;min-height:112px}
+.ph{width:96px;height:auto;aspect-ratio:1;align-self:stretch;border-bottom:0;border-right:1px solid var(--bd);flex:none}
+.cb{padding:10px 12px}
+.tag{font-size:11px;line-height:1.2}
+.card h3{font-size:18px;margin:0 0 3px}
+.card p{font-size:13px;line-height:1.35;margin:0 0 8px}
+.pr{font-size:17px;padding-top:5px}
+.gal{grid-template-columns:1fr;grid-template-rows:auto}
+.t1{grid-column:auto}
+.t{height:200px}
+}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.panel{transition:none}}
 </style>
 </head>
