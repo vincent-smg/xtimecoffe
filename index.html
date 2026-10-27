@@ -125,8 +125,8 @@ footer .wrap{display:flex;align-items:center;gap:18px}
 @media(max-width:900px){
 .brand{z-index:1}
 .burger{display:block}
-.panel{display:none;position:absolute;top:100%;left:0;right:0;background:var(--or);flex-direction:column;align-items:flex-start;gap:18px;padding:20px 24px 24px;margin:0;border-top:1px solid rgba(255,255,255,.35);z-index:0}
-#menu:checked~.site .panel{display:flex}
+.panel{visibility:hidden;opacity:0;transform:translateY(-8px);pointer-events:none;position:absolute;top:100%;left:0;right:0;background:var(--or);flex-direction:column;align-items:flex-start;gap:18px;padding:20px 24px 24px;margin:0;border-top:1px solid rgba(255,255,255,.35);z-index:0;transition:opacity .2s ease,transform .2s ease,visibility 0s linear .2s}
+#menu:checked~.site .panel{visibility:visible;opacity:1;transform:translateY(0);pointer-events:auto;transition:opacity .2s ease,transform .2s ease,visibility 0s}
 .links{flex-direction:column;gap:14px;margin:0}
 .dd{left:0;right:auto}
 .hero .wrap,.about .wrap,.info .wrap{grid-template-columns:1fr;gap:32px}
@@ -137,7 +137,7 @@ footer .wrap{display:flex;align-items:center;gap:18px}
 section{padding:56px 0}
 }
 @media(max-width:560px){.grid{grid-template-columns:1fr}.gal{grid-template-columns:1fr;grid-template-rows:auto}.t1{grid-column:auto}.t{height:200px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.panel{transition:none}}
 </style>
 </head>
 <body>
